@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+html,body {
+height: 100%;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+body {
+  font-family: 'Pretendard', sans-serif !important;
+  background-color: #000;
+  color: #fff;
+}
+body[data-theme="white"] {
+    background-color: #fff;
+    color: #333;
+}
+
+.layout {
+  height: 100%;
+  margin: 0 auto;
+  position:relative; 
+}
+/* header styles */
+header {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header .header_wrap {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header_wrap h1{
+  font-size: 0; 
+}
+
+header .header_wrap nav ul {
+  font-size: 0; 
+}
+
+header .header_wrap nav ul > li {
+  display: inline-block;
+  margin-right: 50px;
+  vertical-align: middle;
+}
+
+header .header_wrap nav ul > li:last-child {
+  margin-right: 0;
+}
+header .header_wrap nav ul > li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+}
+header .header_wrap nav ul > li a:after {
+  content: "";
+  position: absolute;
+  background-color: #EA2DEC;
+  height: 1.5px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+header .header_wrap nav ul > li a:hover:after {
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header .header_wrap nav ul > li a:hover{
+  color: #EA2DEC;
+}
+
+body[data-theme="white"] .layout header {
+  z-index: 50;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.desc_wrap {
+  overflow: hidden;
+  position: relative;
+  height: 700px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background: url('../image/shool_project01_bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.desc_wrap .cont {
+  position: relative;
+  max-width: 1196px;
+  margin: 160px auto 0;
+}
+.desc_wrap .cont .txt_pack > dl > p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.desc_wrap .cont .txt_pack > dl > dt {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 20px;
+}
+.desc_wrap .cont .txt_pack > dl > dd {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  padding-top: 5px;
+}
+
+.section2 {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0 150px 0;
+}
+.section2 .txt {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 200px;
+}
+.btn_share {
+  width: 24px;
+  height: 24px;
+  padding-top: 64px;
+
+  background: url('../image/icon_share.png') no-repeat center;
+  background-size: 100%;
+}
+.desc_wrap .cont .btn_pack {
+  font-size: 0;
+  margin-top: 160px;
+}
+.desc_wrap .cont .people_pack {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.desc_wrap .cont .people_pack > dl > dt {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 10px;
+}
+.desc_wrap .cont .people_pack > dl > dd {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ebebeb;
+  padding-top: 5px;
+}
+
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.btn_link {
+  width: 32px;
+  height: 29px;
+  background: #000 url('../image/icon_arrow.png') no-repeat center;
+  background-size: 100%;
+}
+
+.btn_text {
+  padding-left: 32px;
+  font-weight: 700;
+  background: url('../image/img_leftarr.png') no-repeat left center;
+  background-size: 24px;
+  color: rgba(255,255,255, 0.5);
+}
+
+
+#foot {
+  color: #fff;
+  background: #181818;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 0 100px 0;
+  font-weight: 600;
+}
+.foot_logo {
+  width: 87px;
+}
+#foot .addr {
+  margin-left: 38px;
+  font-size: 14px;
+  width: 530px;
+  font-style: normal;
+}
+#foot .addr .addr__:nth-child(1),
+.addr__:nth-child(2) {
+  line-height: 35px;
+}
+#foot .addr .addr__:nth-child(3) {
+  line-height: 50px;
+}
+#foot .addr .addr__ > label {
+  color: #8B8B8B;
+  margin-right: 10px;
+}
+
+#foot .sns_info {
+  width: 540px;
+}
+#foot .sns_info .box__ {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#foot .sns_info .box__ div {
+  font-weight: 600;
+  border-bottom: 2px solid #8B8B8B;
+  color: #8B8B8B;
+  width: 30%;
+  padding-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#foot .sns_info .box__ div:hover {
+  color: #913BFF;
+  border-color: #913BFF;
+  transition: all 0.3s ease;
+}

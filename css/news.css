@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+html,body {
+height: 100%;
+}
+
+
+/****************************************
+    layout
+*****************************************/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+body {
+  font-family: 'Pretendard', sans-serif !important;
+  background-color: #000;
+  color: #fff;
+}
+
+.layout {
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* header styles */
+header {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header .header_wrap {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header_wrap h1{
+  font-size: 0; 
+}
+
+header .header_wrap nav ul {
+  font-size: 0; 
+}
+
+header .header_wrap nav ul > li {
+  display: inline-block;
+  margin-right: 50px;
+  vertical-align: middle;
+}
+
+header .header_wrap nav ul > li:last-child {
+  margin-right: 0;
+}
+header .header_wrap nav ul > li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+}
+header .header_wrap nav ul > li a:after {
+  content: "";
+  position: absolute;
+  background-color: #EA2DEC;
+  height: 1.5px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+header .header_wrap nav ul > li a:hover:after {
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header .header_wrap nav ul > li a:hover{
+  color: #EA2DEC;
+}
+.main_text {
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  height: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main_text h2{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 64px;
+  font-weight: 600; 
+}
+
+.info_list {
+  margin-bottom: 315px;
+  font-size: 0;
+  text-align: center;
+}
+.info_list > * {
+  display: inline-block;
+  vertical-align: top;
+}
+.info_list > * .frame {
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+.info_list > * .frame img {
+  transform: scale(1);
+  transition: transform 300ms; 
+}
+.info_list > * .frame img:hover {
+  opacity: 0.75;
+}
+.info_list > * .frame dl {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-align: left;
+}
+.info_list > * .frame dl > dt {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-shadow: 0 0 8px rgb(0 0 0 / 50%);
+}
+.info_list > * .frame dl > dd {
+  font-size: 14px;
+  font-weight: 400;
+}
+.info_list > .left_sect {
+  margin-right: 42px;
+}
+.info_list > .right_sect .frame {
+  margin-bottom: 45px;
+}
+
+.info_list .frame:hover img {
+  transform: scale(1.14);
+}
+
+/* new_list styles */
+.news_list {
+  margin: 0 auto;
+  padding-top: 200px;
+  text-align: center; 
+}
+.news_list .title_pack {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.news_list .title_pack h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.news_list ul.news {
+  font-size: 0;
+  width: 1200px;
+  margin: 0 auto; 
+}
+.news_list ul.news > li {
+  display: inline-block;
+  margin-right: 42px;
+  margin-bottom: 100px;
+  vertical-align: top;
+}
+.news_list ul.news > li:nth-child(3n) { 
+  margin-right: 0; }
+
+.news_list ul.news > li:last-child {
+  margin-right: 0;
+}
+.news_list ul.news > li .conts {
+  position: relative;
+  width: 370px;
+  min-height: 454px;
+  text-align: left;
+}
+.news_list ul.news > li .conts p {
+  overflow: hidden;
+}
+.news_list ul.news > li .conts p img {
+  transform: scale(1);
+  transition: all 250ms;
+}
+.news_list ul.news > li .conts > dl {
+  padding-top: 20px;
+}
+.news_list ul.news > li .conts > dl > dt {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.08px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+.news_list ul.news > li .conts > dl > dt::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.news_list ul.news > li .conts:hover dt::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.news_list ul.news > li .conts > dl > dd {
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 160%;
+  color: #ebebeb;
+}
+.news_list ul.news > li .conts .dates {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  color: #999;
+}
+ul.news > li .conts:hover p img {
+  transform: scale(1.14);
+}
+
+.line {
+  position: relative;
+  width: 1200px;
+  height: 0px;
+  margin:0 auto;
+  border: 0.2px solid #4c4c4c;
+}
+.page_num{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 50px;
+  width: 128px;
+  margin:0 auto;
+  margin-top:30px;
+  padding-bottom: 150px;
+}
+.page_num a{
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #999;
+}
+.page_num .select {
+  color: #fff;
+}
+.page_num > .btn_pack .btn {
+  width: 18px;
+  height: 18px;
+  background-size: 100%; 
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.page_num > .btn_pack .btn.btn_right_sm {
+  background: url('../image/btn_right_sm.png');
+  margin-left: 460px;
+}
+
+#foot {
+  color: #fff;
+  background: #181818;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 0 100px 0;
+  font-weight: 600;
+}
+.foot_logo {
+  width: 87px;
+}
+#foot .addr {
+  margin-left: 38px;
+  font-size: 14px;
+  width: 530px;
+  font-style: normal;
+}
+#foot .addr .addr__:nth-child(1),
+.addr__:nth-child(2) {
+  line-height: 35px;
+}
+#foot .addr .addr__:nth-child(3) {
+  line-height: 50px;
+}
+#foot .addr .addr__ > label {
+  color: #8B8B8B;
+  margin-right: 10px;
+}
+
+#foot .sns_info {
+  width: 540px;
+}
+#foot .sns_info .box__ {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#foot .sns_info .box__ div {
+  font-weight: 600;
+  border-bottom: 2px solid #8B8B8B;
+  color: #8B8B8B;
+  width: 30%;
+  padding-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#foot .sns_info .box__ div:hover {
+  color: #913BFF;
+  border-color: #913BFF;
+  transition: all 0.3s ease;
+}
